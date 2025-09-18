@@ -27,7 +27,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                VStack(alignment: .leading) {
+                VStack(alignment: .trailing) {
                     Text("Words to Guess: \(wordsToGuess.count - (wordsGuessed + wordsMissed))")
                     Text("Words in Game: \(wordsToGuess.count)")
                 }
@@ -57,7 +57,6 @@ struct ContentView: View {
                     
                     Button("Guess a letter: ") {
                         //TODO: Guess a Letter button action here
-                        playAgainHidden = false
                     }
                     .buttonStyle(.bordered)
                     .tint(.mint)
@@ -65,7 +64,6 @@ struct ContentView: View {
             } else {
                 Button("Another word?") {
                     //TODO: Another Word Button action here
-                    playAgainHidden = true 
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(.mint)
